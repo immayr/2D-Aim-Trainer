@@ -1,50 +1,56 @@
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #f7f7f7;
-}
-
-#menu {
-	text-align: center;
+#game-box {
+	position: relative;
+	width: 650px;
+	height: 650px;
+	border: 2px solid black;
+	margin: auto;
 	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
-#menu h1 {
-	font-size: 48px;
-	margin-bottom: 20px;
+.timer {
+  margin: 100px
 }
 
-#menu p {
-	font-size: 24px;
-	margin-bottom: 10px;
+.circle {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: red;
+	cursor: pointer;
+	transition: transform 0.2s;
+	z-index: 1;
 }
 
-#menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.circle:hover {
+	transform: scale(1.2);
+	z-index: 2;
 }
 
-#menu li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-#menu a {
+#start-btn {
 	display: block;
+	margin: auto;
+	margin-top: 20px;
 	padding: 10px 20px;
-	background-color: #009688;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 5px;
-	font-size: 18px;
-	transition: background-color 0.2s ease-in-out;
+	font-size: 20px;
+	cursor: pointer;
 }
 
-#menu a:hover {
-	background-color: #00796b;
+#score {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 24px;
+	padding: 10px;
 }
 
-#gameCanvas {
-	display: none;
+#timer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 24px;
+	padding: 10px;
 }
