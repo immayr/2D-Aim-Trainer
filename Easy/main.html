@@ -1,6 +1,68 @@
-	<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/immayr/2D-Aim-Trainer/main/Easy/main.css">
 <!DOCTYPE html>
 <html>
+	<head>
+  <style>
+#game-box {
+	position: relative;
+	width: 650px;
+	height: 650px;
+	border: 2px solid black;
+	margin: auto;
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.timer {
+  margin: 100px
+}
+
+.circle {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: red;
+	cursor: pointer;
+	transition: transform 0.2s;
+	z-index: 1;
+}
+
+.circle:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+
+#start-btn {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#score {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 24px;
+	padding: 10px;
+}
+
+#timer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 24px;
+	padding: 10px;
+}
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+</body>
 <head>
 	<title>Easy Mode</title>
 	<style>
