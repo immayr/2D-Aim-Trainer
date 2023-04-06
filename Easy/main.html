@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-  <style>
+</head>
+<body>
+  <div id="box"></div>
+</body>
+<head>
+	<title>Easy Mode</title>
+	<style>
 #game-box {
 	position: relative;
 	width: 650px;
@@ -57,17 +63,7 @@
 	right: 0;
 	font-size: 24px;
 	padding: 10px;
-}
-  </style>
-</head>
-<body>
-  <div id="box"></div>
-</body>
-<head>
-	<title>Easy Mode</title>
-	<style>
-		/* CSS goes here */
-	</style>
+}	</style>
 </head>
 <body>
 	<div id="game-box"></div>
@@ -76,8 +72,8 @@
 	<div id="score">Score: 0</div>
 	<div id="timer">Time left: 30</div>
 </body>
-	  <script> 
-var gameBox = document.getElementById("game-box");
+	<script>
+		var gameBox = document.getElementById("game-box");
 var startBtn = document.getElementById("start-btn");
 var endBtn = document.getElementById("end-btn");
 var scoreElement = document.getElementById("score");
@@ -148,6 +144,6 @@ endBtn.addEventListener("click", function() {
 		alert("Game Over. Your score is " + score + ".");
 	}
 });
-    }; 
+
   </script> 
 </html>
