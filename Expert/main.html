@@ -90,7 +90,7 @@ function startGame() {
 	updateScore();
 	updateTimer();
 	gameBox.innerHTML = "";
-	intervalId = setInterval(createCircle, 400);
+	intervalId = setInterval(createCircle, 450);
 	setInterval(updateTimer, 1000);
 	startBtn.disabled = true;
 	endBtn.disabled = false;
@@ -119,7 +119,7 @@ function createCircle() {
 
 	setTimeout(function() {
 		gameBox.removeChild(circle);
-	}, 400);
+	}, 450);
 }
 
 function updateScore() {
