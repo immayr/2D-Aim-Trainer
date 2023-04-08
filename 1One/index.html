@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body {
+	margin: 0;
+	padding: 0;
+	background-color: #f7f7f7;
+}
+
+#menu {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#menu h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+#menu p {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#menu a {
+	display: block;
+	padding: 10px 20px;
+	background-color: #009688;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 18px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+#menu a:hover {
+	background-color: #00796b;
+}
+
+#gameCanvas {
+	display: none;
+}
+	</style>
+<head>
+	<title>2D Aim Trainer</title>
+</head>
+<body>
+	<div id="menu">
+		<h1>2D Aim Trainer</h1>
+		<p>Select a mode:</p>
+		<ul>
+			<li><a href="https://monkegamer.com/Easy/main.html" onclick="startGame('easy')">Easy</a></li>
+			<li><a href="https://output.jsbin.com/gepujiy" onclick="startGame('medium')">Medium</a></li>
+			<li><a href="https://output.jsbin.com/kozazok" onclick="startGame('hard')">Hard</a></li>
+			<li><a href="https://output.jsbin.com/xefehoy" onclick="startGame('expert')">Expert</a></li>
+			<li><a href="https://output.jsbin.com/nomebob" onclick="startGame('insane')">Insane</a></li>
+		</ul>
+	</div>
+	<canvas id="gameCanvas"></canvas>
+	<script src="game.js"></script>
+</body>
+</html>
