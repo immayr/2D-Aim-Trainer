@@ -51,6 +51,8 @@
   </div>
 
   <script>
+    
+    
     var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
 	window.location.href = loc.replace('http://','https://');	// https redirect
@@ -488,4 +490,66 @@ function hideAlert(){
 
 
 
+<div>
+  <button id="up">&#8593;</button>
+</div>
+<div>
+  <button id="left">&#8592;</button>
+  <button id="down">&#8595;</button>
+  <button id="right">&#8594;</button>
+</div>
+<style>
+  div {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}
+  </style>
+  <script>
+    const arrowKeyCodes = {
+  up: 38,
+  down: 40,
+  left: 37,
+  right: 39,
+};
+
+function simulateArrowKeyPress(keyCode) {
+  const event = new KeyboardEvent('keydown', {keyCode});
+  document.dispatchEvent(event);
+}
+
+document.getElementById('up').addEventListener('click', () => {
+  simulateArrowKeyPress(arrowKeyCodes.up);
+});
+
+document.getElementById('left').addEventListener('click', () => {
+  simulateArrowKeyPress(arrowKeyCodes.left);
+});
+
+document.getElementById('down').addEventListener('click', () => {
+  simulateArrowKeyPress(arrowKeyCodes.down);
+});
+
+document.getElementById('right').addEventListener('click', () => {
+  simulateArrowKeyPress(arrowKeyCodes.right);
+});
+  </script>
 </body></html>
