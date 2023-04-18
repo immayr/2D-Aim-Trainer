@@ -1,33 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <meta name="description" content="We offer a diverse range of games and tools such as Tetris, aim trainers, and online code editors to cater to the needs of both casual gamers and serious coders. We promise a fun and challenging experience to all of our users. Join the fun and start playing today!"><meta name="keywords" content="monkegamer, gaming, videogames, games, online, internet, epic">
+<html lang="en">
+  <style>
+    /* CSS for the editors */
+.editor {
+  height: 500px;
+  width: calc(100% / 3);
+  border: 1px solid #ccc;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#js-editor {
+  width: calc(100% / 3);
+  float: left;
+}
+
+#html-editor {
+  width: calc(100% / 3);
+  float: left;
+}
+
+#css-editor {
+  width: calc(100% / 3);
+  float: left;
+}
+
+/* CSS for the output area */
+#output {
+  height: 500px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* CSS for the buttons */
+.dsdssd {
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.dsdssd:hover {
+  background-color: #3e8e41;
+}
+  </style>
 <head>
-    <link rel="stylesheet" type="text/css" href="https://monkegamer.com/3Three/main.css">
   <meta charset="UTF-8">
-  <title>Online Code Editor</title>
+  <title>HTML, CSS, and JavaScript Editor</title>
 </head>
 <body>
-  <header>
-    <h1>Online Code Editor</h1>
-  </header>
-  <div class="editor-container">
-    <div class="editor">
-      <div class="editor-title">HTML</div>
-      <textarea id="html-editor"></textarea>
-    </div>
-    <div class="editor">
-      <div class="editor-title">CSS</div>
-      <textarea id="css-editor"></textarea>
-    </div>
-    <div class="editor">
-      <div class="editor-title">JavaScript</div>
-      <textarea id="js-editor"></textarea>
-    </div>
-    <div class="output-container">
-      <div class="output-title">Output</div>
-      <iframe id="output"></iframe>
-    </div>
+  <div class="editor" id="html-editor"></div>
+  <div class="editor" id="css-editor"></div>
+  <div class="editor" id="js-editor"></div>
+  <div>
+    <button class="dsdssd" id="run-btn">Run</button>
+    <button class="dsdssd" id="reset-btn">Reset</button>
   </div>
+  <div id="output"></div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+    <script src="https://monkegamer.com/3Three/main.js"></script>
 </body>
-  <script src="https://monkegamer.com/3Three/main.js"></script>
 </html>
