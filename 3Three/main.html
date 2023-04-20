@@ -1,132 +1,41 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Code Editor</title>
-  <style>
-    /* CSS for the editors */
-    .editor {
-      height: 500px;
-      width: calc(100% / 3);
-      border: 1px solid #ccc;
-      display: inline-block;
-      vertical-align: top;
-      padding: 10px;
-      box-sizing: border-box;
-    }
+<script src="https://monkegamer.com/3Three/main.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Editor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+    <style>
+      iframe {
+  background-color: white;
+}
 
-    #js-editor {
-      float: left;
-    }
-
-    #html-editor {
-      float: left;
-    }
-
-    #css-editor {
-      float: left;
-    }
-
-    /* CSS for the output area */
-    #output {
-      height: 500px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    /* CSS for the buttons */
-    button {
-      padding: 5px 10px;
-      margin-right: 10px;
-      font-size: 16px;
-      border-radius: 4px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #3e8e41;
-    }
-  </style>
-</head>
-<body>
-  <div class="editor" id="html-editor"></div>
-  <div class="editor" id="css-editor"></div>
-  <div class="editor" id="js-editor"></div>
-  <br>
-  <button id="run-button">Run</button>
-  <br>
-  <iframe id="output"></iframe>
-
-  <!-- Load the Ace editor scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
-
-  <script>
-    // Get the HTML, CSS and JS editors
-    var htmlEditor = ace.edit("html-editor");
-    var cssEditor = ace.edit("css-editor");
-    var jsEditor = ace.edit("js-editor");
-
-    // Get the output iframe
-    var output = document.getElementById("output");
-
-    // Function to update the output
-    function updateOutput() {
-      // Get the HTML, CSS and JS code
-      var htmlCode = htmlEditor.getValue();
-      var cssCode = cssEditor.getValue();
-      var jsCode = jsEditor.getValue();
-
-      // Create a new iframe document
-      var outputDoc = output.contentWindow.document;
-      outputDoc.open();
-      outputDoc.write(htmlCode);
-      outputDoc.close();
-
-      // Inject the CSS code into the iframe document
-      var styleTag = outputDoc.createElement("style");
-      styleTag.innerHTML = cssCode;
-      outputDoc.head.appendChild(styleTag);
-
-      // Evaluate the JS code inside the iframe
-      output.contentWindow.eval(jsCode);
-    }
-
-    // Update the output when the Run button is clicked
-    var runButton = document.getElementById("run-button");
-    runButton.addEventListener("click", updateOutput);
-
-    // Set up the Ace editors
-    htmlEditor.setTheme("ace/theme/monokai");
-    htmlEditor.session.setMode("ace/mode/html");
-    htmlEditor.setOptions({
-      enableBasicAutocompletion: true,
-      enableSnippets: true,
-      enableLiveAutocompletion: true,
-      wrap: true
-    });
-
-    cssEditor.setTheme("ace/theme/monokai");
-    cssEditor.session.setMode("ace/mode/css");
-cssEditor.setOptions({
-  enableBasicAutocompletion: true,
-  enableSnippets: true,
-  enableLiveAutocompletion: true,
-  wrap: true
-});
-
-jsEditor.setTheme("ace/theme/monokai");
-jsEditor.session.setMode("ace/mode/javascript");
-jsEditor.setOptions({
-  enableBasicAutocompletion: true,
-  enableSnippets: true,
-  enableLiveAutocompletion: true,
-  wrap: true
-});
-  </script>
-</body>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f2f2f2;
+      }
+      #html-editor, #css-editor, #js-editor, #output {
+        flex: 1;
+        height: 500px;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      #output {
+        width: calc(100% - 40px);
+        height: 500px;
+        border: 1px solid black;
+      }
+      .monokai {
+        background-color: #272822;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="html-editor"></div>
+    <div id="css-editor"></div>
+    <div id="js-editor"></div>
+    <iframe id="output"></iframe>
+    <button id="theme-toggle">Toggle Theme</button>
+  </body>
 </html>
