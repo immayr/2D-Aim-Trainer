@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MonkeGamer Tutorials - Learn HTML, CSS, and JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Add your custom styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      nav {
+        background-color: #f1f1f1;
+        overflow: hidden;
+      }
+      
+      nav a {
+        float: left;
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      nav a:hover {
+        background-color: #ddd;
+        color: #333;
+      }
+      
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .col {
+        float: left;
+        width: 100%;
+        padding: 10px;
+      }
+      
+      @media only screen and (min-width: 768px) {
+        .col {
+          width: 50%;
+        }
+      }
+      
+      @media only screen and (min-width: 1200px) {
+        .col {
+          width: 33.33%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MonkeGamer Tutorials</h1>
+      <p>Learn HTML, CSS, and JavaScript</p>
+    </header>
+    <nav>
+      <div class="container">
+        <a href="#">Home</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <h2>Welcome to MonkeGamer Tutorials!</h2>
+        <p>Here you will find a variety of coding tutorials in HTML, CSS, and JavaScript. Our tutorials are designed for beginners who want to learn how to code and create beautiful web pages.</p>
+        <div class="row">
+          <div class="col">
+            <h3>HTML Tutorials</h3>
+            <p>Our HTML tutorials will teach you the basics of HTML, including tags, attributes, and how to create a web page from scratch.</p>
+            <a href="#">View HTML Tutorials</a>
+          </div>
+          <div class="col">
+               <a href="#">View CSS Tutorials</a>
+          </div>
+          <div class="col">
+            <h3>JavaScript Tutorials</h3>
+            <p>Our JavaScript tutorials will teach you how to add interactivity to your web pages. You will learn about variables, functions, loops, and more.</p>
+            <a href="https://monkegamer.com/Tutorials/jsmain.html">View JavaScript Tutorials</a>
+          </div>
+        </div>
+        <p>Stay tuned for more tutorials coming soon!</p>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 MonkeGamer Tutorials. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
