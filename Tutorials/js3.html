@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Data Types: Understanding Primitive and Reference Types - MonkeGamer Tutorials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Add your custom styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      nav {
+        background-color: #f1f1f1;
+        overflow: hidden;
+      }
+      
+      nav a {
+        float: left;
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      nav a:hover {
+        background-color: #ddd;
+        color: #333;
+      }
+      
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .post {
+        margin: 20px 0;
+      }
+      
+      .post-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 0 10px;
+      }
+      
+      .post-date {
+        font-size: 16px;
+        color: #999;
+        margin: 0 0 10px;
+      }
+      
+      .post-author {
+        font-size: 16px;
+        color: #333;
+        margin: 0 0 10px;
+      }
+      
+      .post-content {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MonkeGamer Tutorials</h1>
+      <p>Learn HTML, CSS, and JavaScript</p>
+    </header>
+    <nav>
+      <div class="container">
+        <a href="#">Home</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="post">
+          <h2 class="post-title">JavaScript Data Types: Understanding Primitive and Reference Types</h2>
+          <div class="post-date">April 25, 2023</div>
+          <div class="post-author">Written by Daniel Ogden</div>
+          <div class="post-content">
+            <h1>Introduction</h1>
+            <p>In JavaScript, data types are used to represent different kinds of values, such as numbers, strings, and objects. Understanding data types is essential for writing effective and error-free JavaScript code.</p>
+            <h1>Primitive Data Types</h1>
+            <p>JavaScript has six primitive data types: 'number', 'string', 'boolean', 'null', 'undefined', and 'symbol'. These data types are called "primitive" because they are immutable, meaning their values cannot be changed once they are created.</p>
+            <h3>Number</h3>
+            <p>The 'number' data type is used to represent numeric values, such as integers and floating-point numbers. For example:</p>
+            <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var age = 30;<br>
+var price = 4.99;
+              </p>
+</div>
+                          <h3>String</h3>
+            <p>The 'string' data type is used to represent text values, enclosed in quotes (either single or double). For example:</p>
+                        <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var message = "Hello, world!";
+              </p>
+</div>
+                                      <h3>Boolean</h3>
+                          <p>The 'boolean' data type is used to represent logical values, either true or false. For example:</p>
+</div>
+                          <h3>String</h3>
+            <p>The 'string' data type is used to represent text values, enclosed in quotes (either single or double). For example:</p>
+                        <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var isFound = true;<br>
+var isActive = false;
+
+              </p>
+</div>
+          <h3>Null</h3>
+          <p>The 'null' data type is used to represent the intentional absence of any object value. For example:</p>
+                                   <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var result = null;
+
+
+              </p>
+</div>
+          <h3>Undefined</h3>
+          <p>The 'undefined' data type is used to represent the absence of a defined value. For example:</p>
+          </div>
+          <h3>Null</h3>
+          <p>The 'null' data type is used to represent the intentional absence of any object value. For example:</p>
+                                   <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var value;<br>
+console.log(value); // output: undefined
+              </p>
+</div>
+        <h3>Symbol</h3>
+        <p>The 'symbol' data type is used to create unique identifiers for object properties. For example:</p>
+           <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var id = Symbol("id");
+              </p>
+</div>
+        <h1>Reference Data Types</h1>
+        <p>JavaScript also has one reference data type: 'object'. Objects are used to represent more complex data structures, such as arrays, functions, and custom objects.</p>
+        <h3>Object</h3>
+        <p>The 'object' data type is used to create custom objects and is also the type of arrays and functions. For example:</p>
+       </div>
+        <h3>Symbol</h3>
+        <p>The 'symbol' data type is used to create unique identifiers for object properties. For example:</p>
+           <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">Javascript:</h2>
+    <p style="font-size: 16px;">var person = {<br>
+  name: "John",<br>
+  age: 30,<br>
+  hobbies: ["reading", "swimming"],<br>
+  sayHello: function() {<br>
+    console.log("Hello!");<br>
+  }<br>
+};<br><br>
+
+var numbers = [1, 2, 3, 4, 5];<br><br>
+
+function add(a, b) {<br>
+  return a + b;<br>
+}
+              </p>
+</div>
+      <h1>Conclusion</h1>
+      <p>In this tutorial, we have covered the basics of primitive and reference data types in JavaScript. Understanding data types is important because it affects how your code behaves and how you can manipulate the values of your variables. In the next tutorial, we will cover operators and expressions, which are used to perform operations on data values in JavaScript.</p>
+        <a href="https://monkegamer.com/Tutorials/js3">Click here to continue to the next tutorial.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 MonkeGamer.com. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
