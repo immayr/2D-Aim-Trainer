@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Data Types: Understanding Primitive and Reference Types - MonkeGamer Tutorials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Add your custom styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      nav {
+        background-color: #f1f1f1;
+        overflow: hidden;
+      }
+      
+      nav a {
+        float: left;
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      nav a:hover {
+        background-color: #ddd;
+        color: #333;
+      }
+      
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .post {
+        margin: 20px 0;
+      }
+      
+      .post-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 0 10px;
+      }
+      
+      .post-date {
+        font-size: 16px;
+        color: #999;
+        margin: 0 0 10px;
+      }
+      
+      .post-author {
+        font-size: 16px;
+        color: #333;
+        margin: 0 0 10px;
+      }
+      
+      .post-content {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MonkeGamer Tutorials</h1>
+      <p>Learn HTML, CSS, and JavaScript</p>
+    </header>
+    <nav>
+      <div class="container">
+        <a href="#">Home</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="post">
+          <h2 class="post-title">Introduction to HTML
+</h2>
+          <div class="post-date">April 25, 2023</div>
+          <div class="post-author">Written by Daniel Ogden</div>
+          <div class="post-content">
+            <h1>Introduction</h1>
+      <p>HTML stands for Hypertext Markup Language and is used to create web pages. HTML allows you to define the structure of a web page using a series of tags and attributes. These tags tell the browser how to display the content on the web page.</p>
+            <h1>The Basic Structure of an HTML Document</h1>
+            <p>An HTML document is made up of several parts, including the '&lt!DOCTYPE&gt' declaration, the '&lthtml&gt' element, the '&lthead&gt section, the '&ltbody&gt' section, etc
+            <p>The '&lt!DOCTYPE&gt' declaration is the first line of an HTML document and tells the browser which version of HTML the document is written in.</p>
+            <p>The '&lthtml&gt' element is the top-level element in an HTML document and contains all other elements on the page.</p>
+            <p>The '&lthead&gt' section contains metadata about the web page, such as the title of the page, which is displayed in the browser's title bar.</p>
+            <p>The '&ltbody&gt' section contains the actual content of the web page, such as text, images, and videos.</p>
+            <h1>HTML Tags and Attributes</h1>
+            <p>HTML tags are used to define different parts of a web page, such as headings, paragraphs, images, and links. HTML tags are enclosed in angle brackets, like this:</p>
+            </div>
+                          <h3>String</h3>
+            <p>The 'string' data type is used to represent text values, enclosed in quotes (either single or double). For example:</p>
+                        <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&lttagname&gtcontent&lt/tagname&gt
+              </p>
+</div>
+          <p>Some HTML tags can also have attributes, which provide additional information about the tag. Attributes are added to the opening tag of an HTML element, like this:</p>
+          <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&lttagname&gt attribute="value">content&lt/tagname&gt
+              </p>
+</div>
+          <h1>Creating Your First Web Page</h1>
+          <p>To create your first web page, you can use a simple text editor like Notepad or TextEdit to write your HTML code. Here is an example of a simple web page:</p>
+                       <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&lt!DOCTYPE html&gt<br>
+&lthtml&gt<br>
+  &lthead&gt<br>
+    &lttitle&gtMy First Web Page&lt/title&gt<br>
+  &lt/head&gt<br>
+  &ltbody&gt<br>
+    &lth1&gtWelcome to My First Web Page!&lt/h1&gt<br>
+    &ltp&gtThis is the first paragraph of my web page.&lt/p&gt<br>
+    &ltp&gtThis is the second paragraph of my web page.&lt/p&gt<br>
+  &lt/body&gt<br>
+&lt/html&gt
+
+              </p>
+</div> 
+          <p>Save the file with a '.html' extension and open it in your web browser to see your first web page!</p>
+          <h1>Conclusion</h1>
+          <p>In this tutorial, we have covered the basics of HTML and how it is used to create web pages. We have also looked at the basic structure of an HTML document, HTML tags and attributes, and how to create a simple web page. In the next tutorial, we will cover CSS, which is used to style web pages and make them look more visually appealing.</p>
+          <a href="https://monkegamer.com/Tutorials/js3">Click here to continue to the next tutorial.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 MonkeGamer.com. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
