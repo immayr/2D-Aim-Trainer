@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Data Types: Understanding Primitive and Reference Types - MonkeGamer Tutorials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Add your custom styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      nav {
+        background-color: #f1f1f1;
+        overflow: hidden;
+      }
+      
+      nav a {
+        float: left;
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      nav a:hover {
+        background-color: #ddd;
+        color: #333;
+      }
+      
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .post {
+        margin: 20px 0;
+      }
+      
+      .post-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 0 10px;
+      }
+      
+      .post-date {
+        font-size: 16px;
+        color: #999;
+        margin: 0 0 10px;
+      }
+      
+      .post-author {
+        font-size: 16px;
+        color: #333;
+        margin: 0 0 10px;
+      }
+      
+      .post-content {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MonkeGamer Tutorials</h1>
+      <p>Learn HTML, CSS, and JavaScript</p>
+    </header>
+    <nav>
+      <div class="container">
+        <a href="#">Home</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="post">
+          <h2 class="post-title">HTML Basics: Part 2</h2>
+          <div class="post-date">April 25, 2023</div>
+          <div class="post-author">Written by Daniel Ogden</div>
+          <div class="post-content">
+            <h1>Introduction</h1>
+      <p>In the previous tutorial, we covered the basics of HTML and how it is used to create web pages. In this tutorial, we will cover some more advanced topics, including linking to external files, using paragraph and heading elements, and creating lists.</p>
+            <h1>Linking to External Files</h1>
+            <p>HTML allows you to link to external files, such as images, stylesheets, and scripts. To link to an external file, you can use the &ltlink> element in the <head> section of your HTML document, like this:</p>
+            </div>
+                          <h3>String</h3>
+            <p>The 'string' data type is used to represent text values, enclosed in quotes (either single or double). For example:</p>
+                        <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;"><!DOCTYPE html>
+<html>
+  <head>
+    &lttitle>My First Web Page&lt/title><br>
+    &ltlink rel="stylesheet" href="styles.css"><br>
+  &lt/head><br>
+  &ltbody><br>
+    &lth1>Welcome to My First Web Page!&lt/h1><br>
+    &ltp>This is the first paragraph of my web page.&lt/p><br>
+    &ltp>This is the second paragraph of my web page.&lt/p><br>
+  &lt/body><br>
+&lt/html>
+
+              </p>
+</div>
+          <p>In this example, we are linking to a stylesheet called "styles.css" in the same directory as our HTML file.</p>
+          <h1>Paragraph and Heading Elements</h1>
+          <p>HTML provides several elements for creating paragraphs and headings. Paragraphs are created using the '&ltp>' element, and headings are created using the '&lth1>' through '&lth6>' elements.</p>
+                       <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&lt!DOCTYPE html><br>
+&lthtml><br>
+  &lthead><br>
+    &lttitle>My First Web Page&lt/title><br>
+  &lt/head><br>
+  &ltbody><br>
+    &lth1>Welcome to My First Web Page!&lt/h1><br>
+    &ltp>This is the first paragraph of my web page.&lt/p><br>
+    &lth2>Section One&lt/h2><br>
+    &ltp>This is the second paragraph of my web page.&lt/p><br>
+    &lth3>Subsection One&lt/h3><br>
+    &ltp>This is the third paragraph of my web page.&lt/p><br>
+    &lth2>Section Two&lt/h2><br>
+    &ltp>This is the fourth paragraph of my web page.&lt/p><br>
+  &lt/body><br>
+&lt/html>
+              </p>
+</div> 
+          <p>In this example, we have created several paragraphs and headings to organize our content into sections and subsections.</p>
+                          <h1>Creating Lists</h1>
+                          <p>HTML provides two types of lists: ordered lists (&ltol>) and unordered lists (&ltul>). Ordered lists are used for lists with a specific order, while unordered lists are used for lists without a specific order.</p>
+                                                          <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&lt!DOCTYPE html><br>
+&lthtml><br>
+  &lthead><br>
+    &lttitle>My First Web Page&lt/title><br><br>
+  &lt/head><br>
+  &ltbody><br>
+    &lth1>Welcome to My First Web Page!&lt/h1><br>
+    &ltp>This is the first paragraph of my web page.&lt/p><br>
+    &lth2>Section One&lt/h2><br>
+    &ltol><br>
+      &ltli>Item One&lt/li><br>
+      &ltli>Item Two&lt/li><br>
+      &ltli>Item Three&lt/li><br>
+    &lt/ol><br>
+    &lth2>Section Two&lt/h2><br>
+    &ltul><br>
+      &ltli>Item One&lt/li><br>
+      &ltli>Item Two&lt/li><br>
+      &ltli>Item Three&lt/li><br>
+    &lt/ul><br>
+  &lt/body><br>
+&lt/html>
+
+              </p>
+</div>                  
+                          <p>In this example, we have created both an ordered list and an unordered list to display our content in a list format.</p>
+                          <h1>Adding Images to Your HTML Page</h1>
+                          <p>Images are an important part of web design, and you can easily add them to your HTML page using the 'img' element. The 'img' element is a self-closing tag, which means it doesn't have a closing tag.</p>
+                          <p>Here's an example of how to use the 'img' element to add an image to your page:</p>
+                                                                                    <div style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold;">HTML:</h2>
+    <p style="font-size: 16px;">&ltimg src="https://monkegamer.com/logo.png" alt="MonkeGamer Logo">
+              </p>
+</div>   
+                          <p>In this example, we've used the src attribute to specify the URL of the image we want to display. We've also included an alt attribute, which provides alternative text for the image in case it can't be displayed.</p>
+                          <p>The 'src' attribute is required for the 'img' element, and it should point to the location of your image file on the web. You can use either an absolute URL (like the one we used in the example) or a relative URL (which we'll cover in a future tutorial).</p>
+                                                    <p>Here are some additional attributes you can use with the 'img' element:</p>
+                          <li>'width': specifies the width of the image in pixels or as a percentage of the parent element's width.</li>
+                          <li>'height': specifies the height of the image in pixels or as a percentage of the parent element's height.</li>
+                          <li>'border': specifies the width of the border around the image.</li>
+                          <li>'align': specifies the alignment of the image with respect to surrounding elements.</li>
+                          <li>'title': specifies additional information about the image (displayed as a tooltip when the mouse hovers over the image).</li>
+                          <p>You can include multiple img elements on a single page to display multiple images. Just be sure to specify a unique src attribute for each image.</p>
+                          <h1>Conclusion</h1>
+          <p>In this tutorial, we have covered some more advanced topics in HTML, including linking to external files, using paragraph and heading elements, creating images, and creating lists. By mastering these concepts, you can create more complex and structured web pages. In the next tutorial, we will cover CSS, which is used to style web pages and make them look more</p>
+                          <a href="https://monkegamer.com/Tutorials/cssintro">Click here to continue to the next tutorial.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 MonkeGamer.com. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
