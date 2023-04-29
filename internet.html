@@ -452,6 +452,16 @@ font-size: 20px;
           <p>Streaming services like Netflix, Hulu, and Disney+ have also become incredibly popular in recent years, allowing people to watch movies and TV shows on demand. These services have disrupted traditional TV and movie distribution models, and have given rise to a new era of entertainment consumption.</p>
         </div>
       </section>
+      <section id="more-info">
+  <h2>More Fun Facts About the Internet</h2>
+  <p>In addition to the major milestones we've covered, there are plenty of interesting tidbits about the internet that you might not know:</p>
+  
+  <ul>
+    <li>The first message sent over the internet was "LO" - the intention was to send "LOGIN" but the system crashed after the first two letters were sent.</li>
+    <li>The first website ever created was dedicated to information about the World Wide Web itself, and went live on August 6, 1991. You can still view it today!</li>
+    <li>The "@" symbol was originally used to signify "at the rate of" in accounting and commercial transactions, but it became popularized as a way to denote email addresses in the 1970s.</li>
+    <li>The concept of the "404 error" (which occurs when a webpage cannot be found) was first introduced by a group of developers at CERN in the early days of the web.</li>
+  </ul>
       <section id="resources">
         <div class="container">
           <h2>Resources</h2>
@@ -481,6 +491,25 @@ font-size: 20px;
     <label><input type="radio" name="q3" value="a"> Bill Gates</label><br>
     <label><input type="radio" name="q3" value="b"> Tim Berners-Lee</label><br>
     <label><input type="radio" name="q3" value="c"> Steve Jobs</label><br>
+    <p>4. What were the first two letters of the first message ever sent over the internet?</p>
+    <label><input type="radio" name="q4" value="a"> LO</label><br>
+    <label><input type="radio" name="q4" value="b"> HI</label><br>
+    <label><input type="radio" name="q4" value="c"> HE</label><br>
+    
+    <p>5. What was the first website ever created about?</p>
+    <label><input type="radio" name="q5" value="a"> The history of the internet</label><br>
+    <label><input type="radio" name="q5" value="b"> Cats</label><br>
+    <label><input type="radio" name="q5" value="c"> The World Wide Web</label><br>
+    
+    <p>6. What was the original purpose of the "@" symbol?</p>
+    <label><input type="radio" name="q6" value="a"> Denote email addresses</label><br>
+    <label><input type="radio" name="q6" value="b"> Signify "at the rate of" in accounting</label><br>
+    <label><input type="radio" name="q6" value="c"> Mark hyperlinks on webpages</label><br>
+    
+    <p>7. Who introduced the concept of the "404 error"?</p>
+    <label><input type="radio" name="q7" value="a"> Tim Berners-Lee</label><br>
+    <label><input type="radio" name="q7" value="b"> The developers at CERN</label><br>
+    <label><input type="radio" name="q7" value="c"> Bill Gates</label><br>
     
     <button type="button" onclick="checkQuiz()">Submit</button>
   </form>
@@ -497,34 +526,49 @@ font-size: 20px;
     </footer>
   </body>
   <script>
-    function checkQuiz() {
+// Sticky header
+window.onscroll = function() {stickyHeader()};
+
+var header = document.getElementById("main-header");
+var sticky = header.offsetTop;
+
+function stickyHeader() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+// Quiz functionality
+function checkQuiz() {
   // Get the values of the selected answers
   var q1 = document.querySelector('input[name="q1"]:checked').value;
   var q2 = document.querySelector('input[name="q2"]:checked').value;
   var q3 = document.querySelector('input[name="q3"]:checked').value;
-  
-  // Check the answers and calculate the score
+  var q4 = document.querySelector('input[name="q4"]:checked').value;
+  var q5 = document.querySelector('input[name="q5"]:checked').value;
+  var q6 = document.querySelector('input[name="q6"]:checked').value;
+  var q7 = document.querySelector('input[name="q7"]:checked').value;
+
+  // Check the answers and keep track of the score
   var score = 0;
-  if (q1 === "b") {
-    score += 1;
+  if (q1 === "b") { score++; }
+  if (q2 === "a") { score++; }
+  if (q3 === "b") { score++; }
+  if (q4 === "a") { score++; }
+  if (q5 === "c") { score++; }
+  if (q6 === "b") { score++; }
+  if (q7 === "b") { score++; }
+
+  // Display the results in an alert
+  var result;
+  if (score === 7) {
+    result = "Congratulations, you got a perfect score! (7/7)";
+  } else {
+    result = "You scored " + score + " out of 7.";
   }
-  if (q2 === "a") {
-    score += 1;
-  }
-  if (q3 === "b") {
-    score += 1;
-  }
-  
-  // Display the results in a JavaScript alert
-  if (score === 0) {
-    alert("You got 0 out of 3 correct. Better luck next time!");
-  } else if (score === 1) {
-    alert("You got 1 out of 3 correct. Not bad, but you can do better!");
-  } else if (score === 2) {
-    alert("You got 2 out of 3 correct. Great job!");
-  } else if (score === 3) {
-    alert("You got 3 out of 3 correct. You're a true internet history expert!");
-  }
+  alert(result);
 }
 
   </script>
