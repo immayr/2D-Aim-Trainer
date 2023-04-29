@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    /* Global styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Header styles */
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+/* Main content styles */
+
+main {
+  margin-top: 100px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+section h2 {
+  margin-bottom: 40px;
+}
+
+section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.section-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.section-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-items {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 20px;
+  margin-bottom: 20px;
+}
+
+.carousel-item {
+flex: 0 0 auto;
+width: 80%;
+margin-right: 20px;
+scroll-snap-align: center;
+position: relative;
+}
+
+.carousel-item:last-of-type {
+margin-right: 0;
+}
+
+.carousel-item img {
+max-width: 100%;
+max-height: 100%;
+object-fit: cover;
+}
+
+.carousel-item p {
+font-size: 14px;
+margin-top: 10px;
+text-align: center;
+}
+
+.carousel-nav {
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+height: 40px;
+z-index: 2;
+}
+
+.carousel-nav button {
+background-color: #fff;
+border: none;
+cursor: pointer;
+font-size: 24px;
+padding: 0 10px;
+margin: 0 10px;
+}
+
+.carousel-nav button:hover {
+color: #666;
+}
+
+.carousel-dot {
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+bottom: 20px;
+left: 0;
+right: 0;
+margin: 0 auto;
+width: 60px;
+z-index: 2;
+}
+
+.carousel-dot button {
+background-color: #fff;
+border: none;
+cursor: pointer;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+margin: 0 5px;
+padding: 0;
+}
+
+.carousel-dot button.active {
+background-color: #333;
+}
+
+/* Footer styles */
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 40px;
+}
+
+.footer-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.footer-logo {
+font-size: 36px;
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+.footer-nav {
+display: flex;
+}
+
+.footer-nav ul {
+display: flex;
+}
+
+.footer-nav li {
+margin-left: 20px;
+}
+
+.footer-nav a {
+font-size: 18px;
+}
+
+.footer-social {
+display: flex;
+}
+
+.footer-social ul {
+display: flex;
+}
+
+.footer-social li {
+margin-right: 20px;
+}
+
+.footer-social a {
+font-size: 24px;
+color: #fff;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+h1 {
+font-size: 36px;
+}
+
+h2 {
+font-size: 24px;
+}
+
+.section-image {
+height: 300px;
+}
+
+.carousel-item {
+width: 60%;
+}
+
+.carousel-nav button {
+font-size: 20px;
+padding: 0 5px;
+margin: 0 5px;
+}
+
+.carousel-dot {
+bottom: 10px;
+}
+
+.footer-nav {
+margin-top: 20px;
+}
+
+.footer-nav li {
+margin-left: 10px;
+}
+
+.footer-social {
+margin-top: 20px;
+}
+
+.footer-social li {
+margin-right: 10px;
+}
+
+.footer-social a {
+font-size: 20px;
+}
+  
+  .quiz {
+  padding: 50px 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.quiz h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.quiz p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.quiz form {
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.quiz h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.quiz label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.quiz input[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quiz input[type="submit"]:hover {
+  background-color: #666;
+}
+  </style>
+  <head>
+    <meta charset="UTF-8">
+    <title>The History of the Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-AbhJZoTGsOMG63zCg8DjzvBm/cJ1XmTbyT0TzsEjMh6yz2P6JmbR6c8NvstcqyfUz9JUtgj6UO+yv3GzYQr6pw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header class="sticky">
+      <div class="container">
+        <h1>The History of the Internet</h1>
+        <nav>
+          <ul>
+            <li><a href="#early-development">Early Development</a></li>
+            <li><a href="#the-web">The Web</a></li>
+            <li><a href="#today">Today</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <section id="early-development">
+        <div class="container">
+          <h2>Early Development</h2>
+          <p>The history of the internet dates back to the 1960s, when the U.S. Department of Defense developed a way to connect computers to each other in order to share information. This network, called ARPANET, was the precursor to the modern internet.</p>
+          <p>Over the next few decades, the internet continued to grow and develop, with the creation of email, file transfer protocols, and other early technologies.</p>
+        </div>
+      </section>
+      <section id="the-web">
+        <div class="container">
+          <h2>The Web</h2>
+          <p>In the early 1990s, British computer scientist Tim Berners-Lee developed the World Wide Web, a system of interconnected documents that could be accessed via the internet. This invention revolutionized the way people access and share information, and laid the groundwork for the modern internet as we know it today.</p>
+          <h3>Web Browsers</h3>
+          <p>The first web browser was called WorldWideWeb, and it was created by Tim Berners-Lee in 1990. Other early web browsers included Mosaic and Netscape Navigator. Today, the most popular web browsers are Google Chrome, Mozilla Firefox, and Microsoft Edge.</p>
+        </div>
+      </section>
+      <section id="today">
+        <div class="container">
+          <h2>Today</h2>
+          <p>The internet has come a long way since its early days. Today, it is a global network of interconnected computers, servers, and other devices that allows people to connect with each other, share information, and access a wide variety of online services and resources.</p>
+          <h3>Social Media</h3>
+          <p>Social media has become a major part of the internet in recent years, with platforms like Facebook, Twitter, and Instagram allowing people to connect and share content with each other. Social media has had a profound impact on the way people communicate and interact with each other online.</p>
+          <h3>E-Commerce</h3>
+          <p>E-commerce, or online shopping, has also become a major part of the internet. Websites like Amazon, eBay, and Etsy have revolutionized the way people buy and sell goods and services online. Today, you can buy almost anything online, from clothes and electronics to groceries and furniture.</p>
+          <h3>Streaming Services</h3>
+          <p>Streaming services like Netflix, Hulu, and Disney+ have also become incredibly popular in recent years, allowing people to watch movies and TV shows on demand. These services have disrupted traditional TV and movie distribution models, and have given rise to a new era of entertainment consumption.</p>
+        </div>
+      </section>
+      <section id="resources">
+        <div class="container">
+          <h2>Resources</h2>
+          <p>Here are some resources if you're interested in learning more about the history of the internet:</p>
+          <ul>
+            <li><a href="https://www.internetsociety.org/internet/history-of-the-internet/">Internet Society - History of the Internet</a></li>
+            <li><a href="https://www.bbc.com/timelines/z9n9cdm">BBC - The Story of the Internet</a></li>
+            <li><a href="https://www.history.com/topics/inventions/invention-of-the-internet">History.com - Invention of the Internet</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+<section id="quiz">
+  <h2>Take the Internet History Quiz</h2>
+  <form>
+    <p>1. What year was the World Wide Web invented?</p>
+    <label><input type="radio" name="q1" value="a"> 1989</label><br>
+    <label><input type="radio" name="q1" value="b"> 1991</label><br>
+    <label><input type="radio" name="q1" value="c"> 1993</label><br>
+    
+    <p>2. What was the name of the first web browser?</p>
+    <label><input type="radio" name="q2" value="a"> Mosaic</label><br>
+    <label><input type="radio" name="q2" value="b"> Netscape Navigator</label><br>
+    <label><input type="radio" name="q2" value="c"> Internet Explorer</label><br>
+    
+    <p>3. Who is considered the inventor of the World Wide Web?</p>
+    <label><input type="radio" name="q3" value="a"> Bill Gates</label><br>
+    <label><input type="radio" name="q3" value="b"> Tim Berners-Lee</label><br>
+    <label><input type="radio" name="q3" value="c"> Steve Jobs</label><br>
+    
+    <button type="button" onclick="checkQuiz()">Submit</button>
+  </form>
+</section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 The History of the Internet</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function checkQuiz() {
+  // Get the values of the selected answers
+  var q1 = document.querySelector('input[name="q1"]:checked').value;
+  var q2 = document.querySelector('input[name="q2"]:checked').value;
+  var q3 = document.querySelector('input[name="q3"]:checked').value;
+  
+  // Check the answers and calculate the score
+  var score = 0;
+  if (q1 === "b") {
+    score += 1;
+  }
+  if (q2 === "a") {
+    score += 1;
+  }
+  if (q3 === "b") {
+    score += 1;
+  }
+  
+  // Display the results in a JavaScript alert
+  if (score === 0) {
+    alert("You got 0 out of 3 correct. Better luck next time!");
+  } else if (score === 1) {
+    alert("You got 1 out of 3 correct. Not bad, but you can do better!");
+  } else if (score === 2) {
+    alert("You got 2 out of 3 correct. Great job!");
+  } else if (score === 3) {
+    alert("You got 3 out of 3 correct. You're a true internet history expert!");
+  }
+}
+
+  </script>
+</html>
