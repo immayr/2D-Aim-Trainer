@@ -400,6 +400,28 @@ font-size: 20px;
 .quiz input[type="submit"]:hover {
   background-color: #666;
 }
+  
+  #music-player {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
+
   </style>
   
     <meta charset="UTF-8">
@@ -420,6 +442,12 @@ font-size: 20px;
           </ul>
         </nav>
       </div>
+      <div id="music-player">
+    <audio id="audio-player" src="https://monkegamer.com/TTS%20Project%200.mp3"></audio>
+    <button id="play-button">&#9658;</button>
+    <button id="pause-button">&#10074;&#10074;</button>
+</div>
+
     </header>
     
     <main>
@@ -572,5 +600,18 @@ function checkQuiz() {
 }
 
   </script>
+<script>
+  const audioPlayer = document.getElementById("audio-player");
+const playButton = document.getElementById("play-button");
+const pauseButton = document.getElementById("pause-button");
 
+playButton.addEventListener("click", () => {
+    audioPlayer.play();
+});
+
+pauseButton.addEventListener("click", () => {
+    audioPlayer.pause();
+});
+
+      </script>
 </body></html>
