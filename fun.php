@@ -87,7 +87,7 @@ input[type=submit]:hover {
 		$product = $_POST["product"];
 		$quantity = $_POST["quantity"];
 
-		$to = "youremail@example.com"; // replace with your email address
+		$to = "daniel.10262011416@gmail.com"; // replace with your email address
 		$subject = "New order from Shop Website";
 		$message = "Name: $name\nEmail: $email\nProduct: $product\nQuantity: $quantity";
 		$headers = "From: Shop Website <noreply@shopwebsite.com>\r\n";
