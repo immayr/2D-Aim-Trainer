@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Multiplayer Typing Game</title>
+  <style>
+    #players {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .player {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 50px;
+      background-color: lightgray;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #score {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="players"></div>
+  <div id="text">Type "start" to begin</div>
+  <div id="score"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    // Update player list
+    socket.on('clients', (clients) => {
+      const players = document.getElementById('players');
+      players.innerHTML = '';
+      for (const [id, client] of Object.entries(clients)) {
+        const player = document.createElement('div');
+        player.className = 'player';
+        player.textContent = `${client.name}: ${client.score}`;
+        players.appendChild(player);
+      }
+    });
+
+    // Update client info
+    socket.on('client-info', (client) => {
+      const player = document.createElement('div');
+      player.className = 'player';
+      player.textContent = `${client.name}: ${client.score}`;
+      document.getElementById('players').appendChild(player);
+    });
+
+    // Start game
+    socket.on('start', () => {
+      document.getElementById('text').textContent = 'Type as fast as you can!';
+    });
+
+    // Update score
+socket.on('score', (clients) => {
+  const scores = Object.values(clients).map(client => client.score);
+  document.getElementById('score').textContent = `Score: ${Math.max(...scores)}`;
+});
+
+// Handle typing
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const text = document.getElementById('text').textContent.trim();
+    document.getElementById('text').textContent = '';
+    socket.emit('typing', text);
+  } else {
+    document.getElementById('text').textContent += event.key;
+  }
+});
+  </script>
+</body>
+</html>
