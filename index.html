@@ -1,186 +1,316 @@
-<html><meta name="description" content="We offer a diverse range of games and tools such as Tetris, aim trainers, and online code editors to cater to the needs of both casual gamers and serious coders. We promise a fun and challenging experience to all of our users. Join the fun and start playing today!"><meta name="keywords" content="monkegamer, gaming, videogames, games, online, internet, epic"><head>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="description"
+		content="We offer a diverse range of games and tools such as Tetris, aim trainers, and online code editors to cater to the needs of both casual gamers and serious coders. We promise a fun and challenging experience to all of our users. Join the fun and start playing today!">
+	<meta name="keywords" content="monkegamer, gaming, videogames, games, online, internet, epic">
 	<title>monkegamer</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 	<style>
-      body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
-}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', sans-serif;
+			background-color: #111;
+			color: #fff;
+		}
 
-header {
-	background-color: #0050a5;
-	height: 60px;
-	padding: 10px 0;
-}
+		header {
+			background-color: #222;
+			height: 60px;
+			padding: 10px 0;
+		}
 
-.header-content {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+		.header-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 
-h1 {
-	color: white;
-	font-size: 3rem;
-	margin: 0;
-	padding: 0;
-}
+		h1 {
+			color: #fff;
+			font-size: 3rem;
+			margin: 0;
+			padding: 0;
+		}
 
-nav a {
-	color: white;
-	font-size: 1.2rem;
-	text-decoration: none;
-	margin-left: 20px;
-}
+		nav a {
+			color: #fff;
+			font-size: 1.2rem;
+			text-decoration: none;
+			margin-left: 20px;
+		}
 
-nav a:first-child {
-	margin-left: 0;
-}
+		nav a:first-child {
+			margin-left: 0;
+		}
 
-nav a:hover {
-	text-decoration: underline;
-}
+		nav a:hover {
+			text-decoration: underline;
+		}
 
-main {
-	padding: 50px 0;
-	background-color: #f9f9f9;
-}
+		main {
+			padding: 50px 0;
+		}
 
-section {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: white;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	margin-bottom: 40px;
-}
+		section {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #333;
+			margin-bottom: 40px;
+		}
 
-h2 {
-	font-size: 2rem;
-	margin-top: 0;
-}
+		h2 {
+			font-size: 2rem;
+			margin-top: 0;
+			color: #fff;
+		}
 
-p {
-	font-size: 1.2rem;
-	line-height: 1.5;
-	margin-bottom: 20px;
-}
+		p {
+			font-size: 1.2rem;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
 
-.button-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 20px;
-}
+		.button-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 20px;
+		}
 
-.example-button {
-	display: inline-block;
-	background-color: #0050a5;
-	color: white;
-	font-size: 1.2rem;
-	padding: 10px 20px;
-	text-decoration: none;
-	border-radius: 5px;
-	margin-right: 10px;
+		.example-button {
+			display: inline-block;
+			background-color: #0050a5;
+			color: #fff;
+			font-size: 1.2rem;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 5px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			transition: all 0.3s ease;
+		}
+
+		.example-button:hover {
+			background-color: #003d80;
+		}
+
+		footer {
+			background-color: #111;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		@media screen and (max-width: 768px) {
+			.header-content {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			nav a {
+				margin: 10px 0 0 0;
+				display: block;
+			}
+
+	.example-button {
+	margin-right: 0;
 	margin-bottom: 10px;
-	transition: all 0.3s ease;
-}
-
-.example-button:hover {
-	background-color: #003d80;
-}
-
-footer {
-	background-color: #333;
-	color: white;
-	padding: 20px;
-	text-align: center;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-	.header-content {
-		flex-direction: column;
-		align-items: flex-start;
 	}
-
-	nav a {
-		margin: 10px 0 0 0;
-		display: block;
 	}
-
-	.example-button {
-		margin-right: 0;
-		margin-bottom: 10px;
-	}
-}
-
-@media screen and (max-width: 600px) {
+	@media screen and (max-width: 600px) {
 	h1 {
-		font-size: 2.5rem;
+	font-size: 2.5rem;
 	}
-
+	
 	h2 {
-		font-size: 1.8rem;
+	font-size: 1.8rem;
 	}
-
+	
 	p {
-		font-size: 1rem;
+	font-size: 1rem;
 	}
-
+	
 	nav a {
-		font-size: 1rem;
+	font-size: 1rem;
 	}
-
+	
 	.example-button {
-		font-size: 1rem;
-		padding: 5px 10px;
-		margin-bottom: 5px;
+	font-size: 1rem;
+	padding: 5px 10px;
+	margin-bottom: 5px;
 	}
-  .button {
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-}
+	}
+	
+	/* Form Container */
+	.form-container {
+	max-width: 400px;
+	margin: 0 auto;
+	}
+	
+	/* Form Title */
+	.form-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	}
+	
+	/* Form Input Fields */
+	.form-input {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #333;
+	color: #fff;
+	}
+	
+	/* Form Submit Button */
+	.form-submit {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #0050a5;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	}
+	
+	/* Form Submit Button (Hover) */
+	.form-submit:hover {
+	background-color: #003d80;
+	}
+	</style>
+</head>
 
-  </style>
-<style type="text/css" id="operaUserStyle"></style></head>
 <body>
 	<header>
 		<div class="header-content">
 			<h1>MonkeGamer.com</h1>
 			<nav>
-<a href="https://monkegamer.com/discord.html" target="_blank">
-  <img src="https://i.ibb.co/5MM7Rxf/wfdefwe-FWEF.png" alt="Discord" width="65" height="65" class="button">
-</a>
+				<a href="https://monkegamer.com/discord.html" target="_blank">
+					<img src="https://i.ibb.co/5MM7Rxf/wfdefwe-FWEF.png" alt="Discord" width="65" height="65" class="button">
+                </a>
 			</nav>
 		</div>
 	</header>
 	<main>
 		<section>
 			<h2>Welcome to MonkeGamer</h2>
-			<p>Explore the gaming world with MonkeGamer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ex quis quam ultrices hendrerit. Proin ultrices dolor vel mauris hendrerit scelerisque. Curabitur finibus sem eu rutrum faucibus. In consectetur sapien vel lacus dictum laoreet. Nam at arcu nibh. Nulla auctor orci ac augue luctus varius. Phasellus malesuada lacus id sapien fringilla sagittis.</p>
-			<p>Phasellus congue aliquam felis, eu laoreet est mattis vel. Donec imperdiet neque quam, sed congue lorem congue at. Ut aliquet semper consequat. Sed vel nulla eu odio pharetra sollicitudin ac sed nulla. Morbi ornare eros in erat interdum, id bibendum nisi malesuada. Curabitur id ex massa. Suspendisse venenatis tellus in magna facilisis tincidunt. Aliquam vestibulum felis ac tortor efficitur viverra.</p>
-			<p>Suspendisse quis interdum augue. Proin vitae diam eu mi maximus vestibulum. Nunc ultrices, libero id rhoncus volutpat, arcu nisi egestas turpis, ac iaculis lacus tortor quis massa. Nullam tincidunt euismod magna vel tristique. Nam eget odio sit amet eros dapibus ultricies eget sed nibh. Suspendisse potenti. In euismod libero vel mi venenatis, in bibendum augue imperdiet. Sed tincidunt justo sit amet porta lobortis. Sed iaculis sapien nunc, ut convallis velit congue in.</p>
-			<div class="button-container">
-				<a href="http://monkegamer.com/1One/index.html" class="example-button">2D Aim Trainer</a>
-				<a href="http://monkegamer.com/2Two/main.html" class="example-button">Tetris</a>
-				<a href="http://monkegamer.com/3Three/main.html" class="example-button">Online Code Editor</a>
-				<a href="http://monkegamer.com/4Four/main.html" class="example-button">Monkegamer Race</a>
-				<a href="http://monkegamer.com" class="example-button">Placeholder</a>
-			</div>
-		</section>
-		<section>
-			<h2>About MonkeGamer</h2>
-          <p>remaGeknoM ot emocleW</p>
-          <p>.sittigas allignirf neipas di sucal adauselam sullesahP .suirav sutcul eugua ca icro rotcua alluN .hbin ucra ta maN .teeroal mutcid sucal lev neipas rutetcesnoc nI .subicuaf murtur ue mes subinif rutibaruC .euqsirelecs tirerdneh siruam lev rolod secirtlu niorP .tirerdneh secirtlu mauq siuq xe ni ecsuF .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL</p>
-			<p>.arreviv ruticiffe rotrot ca silef mulubitsev mauqilA .tnudicnit sisilicaf angam ni sullet sitanenev essidnepsuS .assam xe di rutibaruC .adauselam isin mudnebib di ,mudretni tare ni sore eranro ibroM .allun des ca niduticillos arterahp oido ue allun lev deS .tauqesnoc repmes teuqila tU .ta eugnoc merol eugnoc des ,mauq euqen teidrepmi cenoD .lev sittam tse teeroal ue ,silef mauqila eugnoc sullesahP</p>
-          <p>Suspendisse quis interdum augue. Proin vitae diam eu mi maximus vestibulum. Nunc ultrices, libero id rhoncus volutpat, arcu nisi egestas turpis, ac iaculis lacus tortor quis massa. Nullam tincidunt euismod magna vel tristique. Nam eget odio sit amet eros dapibus ultricies eget sed nibh. Suspendisse potenti. In euismod libero vel mi venenatis, in bibendum augue imperdiet. Sed tincidunt justo sit amet porta lobortis. Sed iaculis sapien nunc, ut convallis velit congue in.</p>
-</section></main></body></html>
+			<p>Explore the gaming world with MonkeGamer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+				in ex quis quam ultrices hendrerit. Proin ultrices dolor vel mauris hendrerit scelerisque. Curabitur
+				finibus sem eu rutrum faucibus. In consectetur sapien vel lacus dictum laoreet. Nam at arcu nibh. Nulla
+				auctor orci ac augue luctus varius. Phasellus malesuada lacus id sapien fringilla sagittis.</p>
+								<div class="button-container">
+									<a href="http://monkegamer.com/1One/index.html" class="example-button">2D Aim Trainer</a>
+									<a href="http://monkegamer.com/2Two/main.html" class="example-button">Tetris</a>
+									<a href="http://monkegamer.com/3Three/main.html" class="example-button">Online Code Editor</a>
+									<a href="http://monkegamer.com/4Four" class="example-button">Monkegamer Race</a>
+									<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+													<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+															<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+																	<a href="http://monkegamer.com" class="example-button">Placeholder</a>
+								</div>
+      	<section>
+					<h2>Welcome to MonkeGamer</h2>
+					<p>Explore the gaming world with MonkeGamer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ex
+						quis quam ultrices hendrerit. Proin ultrices dolor vel mauris hendrerit scelerisque. Curabitur finibus sem eu
+						rutrum faucibus. In consectetur sapien vel lacus dictum laoreet. Nam at arcu nibh. Nulla auctor orci ac augue
+						luctus varius. Phasellus malesuada lacus id sapien fringilla sagittis.</p>
+					<p>Phasellus congue aliquam felis, eu laoreet est mattis vel. Donec imperdiet neque quam, sed congue lorem congue
+						at. Ut aliquet semper consequat. Sed vel nulla eu odio pharetra sollicitudin ac sed nulla. Morbi ornare eros in
+						erat interdum, id bibendum nisi malesuada. Curabitur id ex massa. Suspendisse venenatis tellus in magna
+						facilisis tincidunt. Aliquam vestibulum felis ac tortor efficitur viverra.</p>
+					<p>Suspendisse quis interdum augue. Proin vitae diam eu mi maximus vestibulum. Nunc ultrices, libero id rhoncus
+						volutpat, arcu nisi egestas turpis, ac iaculis lacus tortor quis massa. Nullam tincidunt euismod magna vel
+						tristique. Nam eget odio sit amet eros dapibus ultricies eget sed nibh. Suspendisse potenti. In euismod libero
+						vel mi venenatis, in bibendum augue imperdiet. Sed tincidunt justo sit amet porta lobortis. Sed iaculis sapien
+						nunc, ut convallis velit congue in.</p>
+    	<p>Phasellus congue aliquam felis, eu laoreet est mattis vel. Donec imperdiet neque quam, sed congue lorem
+				congue at. Ut aliquet semper consequat. Sed vel nulla eu odio pharetra sollicitudin ac sed nulla. Morbi
+				ornare eros in erat interdum, id bibendum nisi malesuada. Curabitur id ex massa. Suspendisse venenatis
+				tellus in magna facilisis tincidunt. Aliquam vestibulum felis ac tortor efficitur viverra.</p>
+			<p>Suspendisse quis interdum augue. Proin vitae diam eu mi maximus vestibulum. Nunc ultrices, libero id
+				rhoncus vollutpat, arcu nisi egestas turpis, ac iaculis lacus tortor quis massa. Nullam tincidunt euismod magna vel tristique. Nam
+				eget odio sit amet eros dapibus ultricies eget sed nibh. Suspendisse potenti. In euismod libero vel mi venenatis, in
+				bibendum augue imperdiet. Sed tincidunt justo sit amet porta lobortis. Sed iaculis sapien nunc, ut convallis velit
+				congue in.</p>
+				</section>
+				</main>
+				</body>
+				<style>
+					/* Form Container */
+					.form-container {
+						max-width: 400px;
+						margin: 0 auto;
+					}
+				
+					/* Form Title */
+					.form-title {
+						font-size: 24px;
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+				
+					/* Form Input Fields */
+					.form-input {
+						display: block;
+						width: 100%;
+						padding: 10px;
+						margin-bottom: 10px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+					}
+				
+					/* Form Submit Button */
+					.form-submit {
+						display: block;
+						width: 100%;
+						padding: 10px;
+						background-color: #4CAF50;
+						color: #fff;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+				
+					/* Form Submit Button (Hover) */
+					.form-submit:hover {
+						background-color: #45a049;
+					}
+				</style>
+				
+				<div class="form-container">
+					<h1 class="form-title">Contact Us</h1>
+					<form method="post" action="https://formspree.io/f/mpzenyjy">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" class="form-input" required><br>
+				
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" class="form-input" required><br>
+				
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" rows="4" class="form-input" required></textarea><br>
+				
+						<input type="submit" value="Submit" class="form-submit">
+				  </form>
+				</div>
+				</html>
