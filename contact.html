@@ -1,0 +1,57 @@
+				<style>
+					/* Form Container */
+					.form-container {
+						max-width: 400px;
+						margin: 0 auto;
+					}
+				
+					/* Form Title */
+					.form-title {
+						font-size: 24px;
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+				
+					/* Form Input Fields */
+					.form-input {
+						display: block;
+						width: 100%;
+						padding: 10px;
+						margin-bottom: 10px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+					}
+				
+					/* Form Submit Button */
+					.form-submit {
+						display: block;
+						width: 100%;
+						padding: 10px;
+						background-color: #4CAF50;
+						color: #fff;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+				
+					/* Form Submit Button (Hover) */
+					.form-submit:hover {
+						background-color: #45a049;
+					}
+				</style>
+				
+				<div class="form-container">
+					<h1 class="form-title">Contact Us</h1>
+					<form method="post" action="https://formspree.io/f/mpzenyjy">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" class="form-input" required><br>
+				
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" class="form-input" required><br>
+				
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" rows="4" class="form-input" required></textarea><br>
+				
+						<input type="submit" value="Submit" class="form-submit">
+				  </form>
+				</div>
