@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #222;
+			padding: 20px;
+			color: #fff;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+
+		nav {
+			background-color: #444;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 5px 10px;
+		}
+
+		.scrolling-container {
+			overflow-x: scroll;
+			white-space: nowrap;
+			margin-bottom: 20px;
+		}
+
+		.scrolling-container::-webkit-scrollbar {
+			height: 8px;
+		}
+
+		.scrolling-container::-webkit-scrollbar-thumb {
+			background: #888;
+		}
+
+		.scrolling-container::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+
+		.map-card {
+			width: 200px;
+			height: 200px;
+			margin: 10px;
+			background-color: #f1f1f1;
+			display: inline-block;
+			vertical-align: top;
+			font-weight: bold;
+			font-size: 20px;
+			color: #333;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.side-link {
+			position: fixed;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			background-color: #f1f1f1;
+			padding: 10px;
+			font-size: 14px;
+			text-align: center;
+			text-decoration: none;
+			color: #333;
+		}
+
+		.side-link:hover {
+			background-color: #ddd;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Monkegamer World Records - Leaderboard</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f7f7f7;
+			}
+
+			header {
+				background-color: #333;
+				color: #fff;
+				padding: 20px;
+				text-align: center;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 28px;
+			}
+
+			main {
+				max-width: 960px;
+				margin: 20px auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				background-color: #fff;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+				overflow: hidden;
+			}
+
+			.leaderboard {
+				flex-grow: 1;
+				padding: 20px;
+			}
+
+			.leaderboard-title {
+				font-size: 20px;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+
+			.leaderboard-entry {
+				background-color: #f5f5f5;
+				border-radius: 8px;
+				padding: 10px;
+				margin-bottom: 10px;
+				display: flex;
+				align-items: center;
+			}
+
+			.player-info {
+				flex-grow: 1;
+				margin-left: 10px;
+			}
+
+			.player-name {
+				font-weight: bold;
+			}
+
+			.time {
+				color: #777;
+			}
+
+			.map-info {
+				text-align: right;
+			}
+
+			.google-form {
+				width: 400px;
+				height: 488px;
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>Monkegamer World Records</h1>
+		</header>
+
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="maps.html">Maps</a>
+			<a href="submit.html">Submit a Record</a>
+			<a href="about.html">About</a>
+		</nav>
+
+		<main>
+			<div class="leaderboard">
+				<h2 class="leaderboard-title">Leaderboard</h2>
+
+				<div class="leaderboard-entry">
+					<div class="player-info">
+						<div class="player-name">Player 1</div>
+						<div class="time">Time: N/A</div>
+						<div class="date">Date: N/A</div>
+					</div>
+					<div class="map-info">Agency Laser Tag</div>
+				</div>
+
+				<div class="leaderboard-entry">
+					<div class="player-info">
+						<div class="player-name">Player 2</div>
+						<div class="time">Time: N/A</div>
+						<div class="date">Date: N/A</div>
+					</div>
+					<div class="map-info">Agency Laser Tag</div>
+				</div>
+				<div class="leaderboard-entry">
+					<div class="player-info">
+						<div class="player-name">Player 3</div>
+						<div class="time">Time: N/A</div>
+						<div class="date">Date: N/A</div>
+					</div>
+					<div class="map-info">Agency Laser Tag</div>
+				</div>
+				<div class="leaderboard-entry">
+					<div class="player-info">
+						<div class="player-name">Player 4</div>
+						<div class="time">Time: N/A</div>
+						<div class="date">Date: N/A</div>
+					</div>
+					<div class="map-info">Agency Laser Tag</div>
+				</div>
+				<div class="leaderboard-entry">
+					<div class="player-info">
+						<div class="player-name">Player 5</div>
+						<div class="time">Time: N/A</div>
+						<div class="date">Date: N/A</div>
+					</div>
+					<div class="map-info">Agency Laser Tag</div>
+				</div>
+
+				<!-- Add more leaderboard entries here -->
+			</div>
+
+			<iframe class="google-form"
+				src="https://docs.google.com/forms/d/e/1FAIpQLSekpQmd3i_wDN63k8N8SVaQMXQ0JLeQoZuSVi8oywDmfeClaw/viewform?usp=sf_link"></iframe>
+		</main>
+	</body>
+
+	</html>
+</body>
+<html>
