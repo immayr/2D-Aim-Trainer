@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  /* Styles for the spending page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.items-container {
+  margin: 20px 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-name {
+  flex: 1;
+}
+
+.item-cost {
+  margin-left: 20px;
+  min-width: 100px;
+}
+
+.item-input {
+  width: 70px;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.buy-button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+.h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.receipt-item-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.refund-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.refund-button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.refund-button:hover {
+  background-color: #d32f2f;
+}
+
+.refund-input-container {
+  margin-left: 20px;
+}
+
+.refund-text {
+  font-size: 14px;
+}
+
+.refund-input {
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+}
+
+.total-cost-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.total-cost-label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.total-cost {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spend Elon Musk's Money</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div id="remaining-money-container">
+  <h2>Spend Elon Musk's Money</h2>
+    <p id="remaining-money">Remaining Money: $340,000,000,000</p>
+</div>
+
+    <div class="items-container">
+      <div class="item">
+        <span class="item-name">McDonald's Hamburgers</span>
+        <span class="item-cost">$1</span>
+        <input type="number" id="hamburgerQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('McDonald\'s Hamburgers', 1, 'hamburgerQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Book</span>
+        <span class="item-cost">$15</span>
+        <input type="number" id="bookQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Book', 15, 'bookQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Lobster Dinner</span>
+        <span class="item-cost">$45</span>
+        <input type="number" id="lobsterQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Lobster Dinner', 45, 'lobsterQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Video Game</span>
+        <span class="item-cost">$60</span>
+        <input type="number" id="videoGameQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Video Game', 60, 'videoGameQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Amazon Echo</span>
+        <span class="item-cost">$99</span>
+        <input type="number" id="amazonEchoQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Amazon Echo', 99, 'amazonEchoQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Year of Netflix</span>
+        <span class="item-cost">$100</span>
+        <input type="number" id="netflixQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Year of Netflix', 100, 'netflixQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Air Jordans</span>
+        <span class="item-cost">$125</span>
+        <input type="number" id="airJordansQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Air Jordans', 125, 'airJordansQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Airpods</span>
+        <span class="item-cost">$199</span>
+        <input type="number" id="airpodsQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Airpods', 199, 'airpodsQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Gaming Console</span>
+        <span class="item-cost">$299</span>
+        <input type="number" id="gamingConsoleQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Gaming Console', 299, 'gamingConsoleQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Drone</span>
+        <span class="item-cost">$350</span>
+        <input type="number" id="droneQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Drone', 350, 'droneQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Smartphone</span>
+        <span class="item-cost">$699</span>
+        <input type="number" id="smartphoneQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Smartphone', 699, 'smartphoneQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Bike</span>
+        <span class="item-cost">$800</span>
+        <input type="number" id="bikeQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Bike', 800, 'bikeQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Kitten</span>
+        <span class="item-cost">$1,500</span>
+        <input type="number" id="kittenQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Kitten', 1500, 'kittenQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Puppy</span>
+        <span class="item-cost">$1,500</span>
+        <input type="number" id="puppyQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Puppy', 1500, 'puppyQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Auto Rickshaw</span>
+        <span class="item-cost">$2,300</span>
+        <input type="number" id="rickshawQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Auto Rickshaw', 2300, 'rickshawQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Electric Scooter</span>
+        <span class="item-cost">$3,000</span>
+        <input type="number" id="scooterQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Electric Scooter', 3000, 'scooterQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">4K TV</span>
+        <span class="item-cost">$3,500</span>
+        <input type="number" id="tvQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('4K TV', 3500, 'tvQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Motorcycle</span>
+        <span class="item-cost">$8,000</span>
+        <input type="number" id="motorcycleQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Motorcycle', 8000, 'motorcycleQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Hot Air Balloon Ride</span>
+        <span class="item-cost">$10,000</span>
+        <input type="number" id="balloonQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Hot Air Balloon Ride', 10000, 'balloonQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Luxury Watch</span>
+        <span class="item-cost">$20,000</span>
+        <input type="number" id="watchQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Luxury Watch', 20000, 'watchQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Designer Handbag</span>
+        <span class="item-cost">$30,000</span>
+        <input type="number" id="handbagQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Designer Handbag', 30000, 'handbagQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Sports Car</span>
+        <span class="item-cost">$100,000</span>
+        <input type="number" id="carQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Sports Car', 100000, 'carQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">Yacht</span>
+        <span class="item-cost">$2,000,000</span>
+        <input type="number" id="yachtQuantity" class="item-input" min="0" max="100" value="0">
+        <button onclick="buyItem('Yacht', 2000000, 'yachtQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">McDonald's Franchise</span>
+        <span class="item-cost">$1,500,000</span>
+        <input type="number" id="franchiseQuantity" class="item-input" min="0" max="1" value="0">
+        <button onclick="buyItem('McDonald\'s Franchise', 1500000, 'franchiseQuantity')" class="buy-button">Buy</button>
+      </div>
+      <div class="item">
+        <span class="item-name">NBA Team</span>
+        <span class="item-cost">$2,120,000,000</span>
+        <input type="number" id="nbaTeamQuantity" class="item-input" min="0" max="1" value="0">
+        <button onclick="buyItem('NBA Team', 2120000000, 'nbaTeamQuantity')" class="buy-button">Buy</button>
+      </div>
+    </div>
+
+<div id="receipt-container">
+  <h2>Receipt</h2>
+  <ul id="receipt-list"></ul>
+  <p id="total-cost">Total: $0</p>
+  <button onclick="refundItems()" id="refund-button">Refund</button>
+</div>
+
+  <script src="script.js"></script>
+</body><script>// Global variables
+let totalCost = 0;
+const itemList = [];
+const elonMuskMoney = 340000000000;
+let remainingMoney = elonMuskMoney;
+
+// Function to update the receipt
+function updateReceipt() {
+  const receiptList = document.getElementById("receipt-list");
+  const totalElement = document.getElementById("total-cost");
+  receiptList.innerHTML = "";
+
+  // Sort items by price in ascending order
+  const sortedItems = itemList.sort((a, b) => a.price - b.price);
+
+  // Iterate through sorted items and display them in the receipt
+  for (const item of sortedItems) {
+    const listItem = document.createElement("li");
+    listItem.textContent = `x${item.quantity} ${item.name} (${item.price})`;
+    receiptList.appendChild(listItem);
+  }
+
+  // Update the total cost
+  totalElement.textContent = `Total: $${totalCost}`;
+}
+
+// Function to update the remaining money
+function updateRemainingMoney() {
+  const remainingMoneyElement = document.getElementById("remaining-money");
+  remainingMoneyElement.textContent = `Remaining Money: $${remainingMoney}`;
+}
+
+// Function to handle buying an item
+function buyItem(name, price, quantityId) {
+  const quantityInput = document.getElementById(quantityId);
+  const quantity = parseInt(quantityInput.value);
+  const cost = price * quantity;
+
+  // Only add to the receipt if the quantity is greater than 0
+  if (quantity > 0) {
+    if (cost <= remainingMoney) {
+      totalCost += cost;
+      remainingMoney -= cost;
+
+      const existingItem = itemList.find((item) => item.name === name);
+      if (existingItem) {
+        existingItem.quantity += quantity;
+      } else {
+        itemList.push({ name, price, quantity });
+      }
+
+      // Update the receipt and remaining money
+      updateReceipt();
+      updateRemainingMoney();
+    } else {
+      alert("Not enough money to buy this item!");
+    }
+  }
+
+  // Reset the quantity input
+  quantityInput.value = 0;
+}
+
+// Function to handle refunding items
+function refundItems() {
+  totalCost = 0;
+  itemList.length = 0;
+  remainingMoney = elonMuskMoney;
+
+  // Update the receipt and remaining money
+  updateReceipt();
+  updateRemainingMoney();
+}
+  </script>
+
+</html>
